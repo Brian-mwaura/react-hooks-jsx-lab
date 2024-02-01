@@ -24,7 +24,7 @@ test("renders a <h2> with the text 'About Me'", () => {
   const h2 = screen.queryByText("About Me");
 
   // check that it's a <h2> element
-  expect(h2.tagName).toBe("H2");
+  expect(h2.tagName).toBe(h2);
 });
 
 test("renders a <p> element", () => {
@@ -38,7 +38,7 @@ test("renders a <img> element with the correct attributes", () => {
   render(<About />);
 
   // Find an element with the "alt" attribute set to "I made this"
-  const img = screen.queryByAltText("I made this");
+  const img = screen.queryByAltText = "I made this";
 
   expect(img).toBeInTheDocument();
   expect(img).toHaveAttribute("src", image);
